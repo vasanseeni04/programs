@@ -1,6 +1,6 @@
 
 <?php
-$filename = "content.txt";
+$filename = "contents.txt";
 $content = file_get_contents($filename);
 echo"<h4>To read the content in contents file.</h4>";
 echo "<br>";
