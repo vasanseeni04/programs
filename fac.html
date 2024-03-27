@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Factorial Calculator</title>
+</head>
+<body>
+  <body style = "text-align: center; font-size: 20px;">   
+<h2>Factorial Calculator</h2>
+<label for="number">Enter a positive integer:</label>
+<input type="text" id="number">
+<button onclick="calculateFactorial()">Calculate Factorial</button>
+<p id="result"></p>
+
+<script>
+    function calculateFactorial() {
+     
+        const number = parseInt(document.getElementById('number').value);
+
+        const factorial = number >= 0 ? Array.from({length: number}, (_, i) => i + 1).reduce((acc, curr) => acc * curr, 1) : 1;
+        document.getElementById('result').textContent = `The factorial of ${number} is ${factorial}.`;
+    }
+</script>
+</body>
+</html>
